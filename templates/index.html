@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}Welcome | AuthTest{% endblock %}
+{% block content %}
+<section class="hero">
+  <p class="eyebrow">Secure • Simple • Beautiful</p>
+  <h1>Build community with a welcoming sign-in experience.</h1>
+  {% if name %}
+  <p class="welcome">Welcome, <strong>{{ name }}</strong> 👋</p>
+  <div class="cta-row">
+    <a class="btn" href="{{ url_for('members') }}">Go to Members Area</a>
+  </div>
+  {% else %}
+  <p>Join in seconds and unlock members-only content.</p>
+  <div class="cta-row">
+    <a class="btn" href="{{ url_for('signup') }}">Create Account</a>
+    <a class="btn btn-ghost" href="{{ url_for('login') }}">I already have an account</a>
+  </div>
+  {% endif %}
+</section>
+{% endblock %}
