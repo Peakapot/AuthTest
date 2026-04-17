@@ -1,0 +1,160 @@
+:root {
+  --bg: #0f1020;
+  --card: #171a33;
+  --text: #f2f4ff;
+  --muted: #b7bfec;
+  --accent: #7c7dff;
+  --accent-soft: #a7a8ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: radial-gradient(circle at top right, #26295c, var(--bg) 60%);
+}
+
+.container {
+  width: min(920px, 92%);
+  margin: 2rem auto;
+}
+
+.site-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  background-color: rgba(15, 16, 32, 0.7);
+}
+
+.nav {
+  width: min(1000px, 92%);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.95rem 0;
+}
+
+.brand {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: var(--text);
+}
+
+.hero {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.3rem);
+  margin: 0.5rem 0 1rem;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--accent-soft);
+}
+
+.hero p {
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+.welcome {
+  font-size: 1.25rem;
+  color: #d9dcff;
+}
+
+.card {
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.03));
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+}
+
+.form-grid {
+  display: grid;
+  gap: 0.9rem;
+}
+
+label {
+  display: grid;
+  gap: 0.35rem;
+  color: var(--muted);
+}
+
+input {
+  background: #101226;
+  border: 1px solid #2a2f5e;
+  color: var(--text);
+  border-radius: 10px;
+  padding: 0.7rem;
+}
+
+input:focus {
+  outline: 2px solid var(--accent);
+}
+
+.cta-row {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.btn {
+  border: 0;
+  background: var(--accent);
+  color: white;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #696afe;
+}
+
+.btn-ghost {
+  background: transparent;
+  border: 1px solid var(--accent-soft);
+}
+
+.flash-list {
+  list-style: none;
+  padding: 0;
+}
+
+.flash {
+  border: 1px solid rgba(124, 125, 255, 0.5);
+  padding: 0.75rem;
+  background: rgba(124, 125, 255, 0.2);
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
